@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:4306/news
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      maximum-pool-size: 40
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: on
+      multiline: true
