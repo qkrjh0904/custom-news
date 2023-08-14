@@ -1,10 +1,7 @@
 package com.news.domain.db;
 
-import com.news.domain.enums.NewsType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,11 +16,10 @@ public class News extends BaseDateTimeEntity {
     @Column(name = "sn")
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private NewsType type;
-
     private String title;
 
     private String contents;
+
+
 
 }
